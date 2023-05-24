@@ -21,6 +21,7 @@ const slides = [
 //
 const arrow_left = document.querySelector(".arrow_left");
 const arrow_right = document.querySelector(".arrow_right");
+const div_dots = document.querySelector(".dots");
 //
 arrow_left.addEventListener("click", () => {
     alert("Fleche gauche");
@@ -28,3 +29,8 @@ arrow_left.addEventListener("click", () => {
 arrow_right.addEventListener("click", () => {
     alert("Fleche droite");
 });
+for (let i = 0; i < slides.length; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    div_dots.appendChild(dot);
+}
