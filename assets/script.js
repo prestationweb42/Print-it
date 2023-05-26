@@ -24,9 +24,9 @@ const banner_img = document.querySelector(".banner-img");
 const arrow_left = document.querySelector(".arrow_left");
 const arrow_right = document.querySelector(".arrow_right");
 const div_dots = document.querySelector(".dots");
+const dots = document.querySelectorAll(".dot");
 let count = 0;
 const nb_slides = slides.length;
-console.log(nb_slides);
 // function display current img
 function showCurrentImg() {
     const img_banner = document.createElement("img");
@@ -40,7 +40,9 @@ function showCurrentImg() {
 showCurrentImg();
 
 // previous
+
 function previous() {
+    dots[count].classList.remove("dot_selected");
     if (count > 0) {
         count--;
     } else {
@@ -54,11 +56,12 @@ function previous() {
     const p_banner = document.createElement("p");
     p_banner.innerHTML = slides[count].tagLine;
     banner_id.appendChild(p_banner);
-    console.log(count);
+    dots[count].classList.add("dot_selected");
 }
 arrow_left.addEventListener("click", previous);
 // next
 function next() {
+    dots[count].classList.remove("dot_selected");
     if (count < nb_slides - 1) {
         count++;
         console.log(count);
@@ -73,11 +76,7 @@ function next() {
     const p_banner = document.createElement("p");
     p_banner.innerHTML = slides[count].tagLine;
     banner_id.appendChild(p_banner);
+    dots[count].classList.add("dot_selected");
 }
 arrow_right.addEventListener("click", next);
-//
-for (let i = 0; i < slides.length; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    div_dots.appendChild(dot);
-}
+
