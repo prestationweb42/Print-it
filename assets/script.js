@@ -39,8 +39,7 @@ function showCurrentImg() {
 }
 showCurrentImg();
 
-// previous
-
+// function previous
 function previous() {
     dots[count].classList.remove("dot_selected");
     if (count > 0) {
@@ -59,7 +58,7 @@ function previous() {
     dots[count].classList.add("dot_selected");
 }
 arrow_left.addEventListener("click", previous);
-// next
+// function next
 function next() {
     dots[count].classList.remove("dot_selected");
     if (count < nb_slides - 1) {
@@ -79,4 +78,3 @@ function next() {
     dots[count].classList.add("dot_selected");
 }
 arrow_right.addEventListener("click", next);
-
