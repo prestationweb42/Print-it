@@ -20,10 +20,8 @@ const slides = [
 ];
 //
 const banner_id = document.getElementById("banner");
-const banner_img = document.querySelector(".banner-img");
 const arrow_left = document.querySelector(".arrow_left");
 const arrow_right = document.querySelector(".arrow_right");
-const div_dots = document.querySelector(".dots");
 const dots = document.querySelectorAll(".dot");
 let count = 0;
 const nb_slides = slides.length;
